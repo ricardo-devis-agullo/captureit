@@ -1,0 +1,14 @@
+<template name="chat">
+	<div id="chat" class="ui segment">
+		<p>Chat</p>
+		<div id="chat-messages" class="ui segment">
+			{{#each messages}}
+				<p><strong>{{name}}</strong> {{message}}</p>
+			{{/each}}
+		</div>
+		<div class="ui fluid action input">
+			<input type="text" id="chat-input" placeholder="Enter message...">
+			<div class="ui button" id="chat-send">Send</div>
+		</div>
+	</div>
+</template>

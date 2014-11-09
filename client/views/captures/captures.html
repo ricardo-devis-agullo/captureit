@@ -1,0 +1,31 @@
+<template name="captures">
+	<div id="captures" class="ui segment">
+		<div class="ui center aligned three column grid">
+			<div class="equal height row">
+				<div class="column">
+					<img class="ui rounded small image" src="images/bg1.jpg">
+				</div>
+				<div class="column">
+					<img class="ui rounded small image" src="images/bg2.jpg">
+				</div>
+				<div class="column">
+					<img class="ui rounded small image" src="images/bg3.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ui modal">
+		<i class="close icon"></i>
+		<img id="fs-img" class="ui image" src="images/bg1.jpg" />
+	</div>	
+	<script>		
+		$(document).ready(function() {
+			$('#captures img').click(function() {
+				$('.modal #fs-img')[0].src = $(this)[0].src;
+				$('.modal').modal('show');
+			});
+			
+
+		});
+	</script>
+</template>
