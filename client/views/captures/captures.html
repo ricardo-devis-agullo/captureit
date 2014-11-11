@@ -2,15 +2,11 @@
 	<div id="captures" class="ui segment">
 		<div class="ui center aligned three column grid">
 			<div class="equal height row">
-				<div class="column">
-					<img class="ui rounded small image" src="images/bg1.jpg">
-				</div>
-				<div class="column">
-					<img class="ui rounded small image" src="images/bg2.jpg">
-				</div>
-				<div class="column">
-					<img class="ui rounded small image" src="images/bg3.jpg">
-				</div>
+			 	{{#each snapshots}}
+					<div class="column">
+						<img class="ui rounded small image" src="{{src}}">
+					</div>
+				{{/each}}
 			</div>
 		</div>
 	</div>
@@ -24,8 +20,6 @@
 				$('.modal #fs-img')[0].src = $(this)[0].src;
 				$('.modal').modal('show');
 			});
-			
-
 		});
 	</script>
 </template>

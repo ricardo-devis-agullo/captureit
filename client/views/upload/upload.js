@@ -8,7 +8,7 @@ Template['upload'].events({
 		var meteoruser = Meteor.user().username;
 		var reader = new FileReader();
 		reader.onload = function(e) {
-			DBFiles.insert({src:e.target.result, username: meteoruser});
+			DBFiles.insert({src:e.target.result, username:meteoruser, created:Date.now()});
 		};
 		reader.readAsDataURL(file);
 	}

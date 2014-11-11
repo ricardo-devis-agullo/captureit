@@ -7,3 +7,15 @@ Messages.allow({
 		return true;
 	}
 });
+
+Meteor.publish('dbfiles', function() {
+	return DBFiles.find();
+});
+
+DBFiles.allow({
+	'insert': function() {
+		return true;
+	}
+});
+
+
